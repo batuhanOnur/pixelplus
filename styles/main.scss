@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* VARIABLES */
+$orange-color: #FC6A42;
+$blue-color:#4466C9;
+$yellow-color: #FCEC64;
+$text-blue: #648CFF;
+$text-gray: #999999;
+$text-black: #353854;
+$text-lightgray:#AEAEAE;
+$circle-orange: #F2A14E;
+$circle-blue:#B8FAEE;
+$circle-lightblue: #7693C8;
+$border-color: #434769;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+/* Right tab*/
+.fixed-nav{
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    width: 80px;
+    height: 100vh;
+    background: #231f20;
+    text-align: center;
+
+    a{
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    .menu-btn_aside{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        z-index: 15;
+        top:15%;
+        left: 15%;
+    }
+    
+}
+
+.aside-nav{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.aside_active{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.running{
+    color: $orange-color;
+}
+  
+
+
+
+/* MIXINS*/
+
+@mixin flex($justify, $align, $direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin circle($width,$height){
+    width: $width;
+    height: $height;
+    position: absolute;
+    border-radius: 50%;  
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   
+    p{
+        color: #fff;
+        text-transform: uppercase;
+    }
+}
+
+@mixin transform($value){
+    -webkit-transform: ($value);
+       -moz-transform: ($value);
+        -ms-transform: ($value);
+            transform: ($value);
+  }
+  @mixin transition($value){
+    -webkit-transition: ($value);
+       -moz-transition: ($value);
+        -ms-transition: ($value);
+            transition: ($value);
+  }
+
+@mixin heading($margin-top){
+    margin-top: $margin-top;
+    text-align: center;
+    h1{
+        text-transform: uppercase;
+        color: $blue-color;
+        font-size: 36px;
+    }
+
+    p{
+        margin-top: 30px;
+        font-size: 18px;
+        color: $text-gray;
+    }
+}
+
+/* IMPORTS */
+@import "header";
+@import "first";
+@import "features";
+@import "screenshots";
+@import "reviews";
+@import "download";
+@import "footer";
+@import "widgets";
+@import "responsive";

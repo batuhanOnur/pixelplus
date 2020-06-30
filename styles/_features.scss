@@ -1,0 +1,32 @@
+.features-heading{
+    @include heading(131px);
+}
+
+.features-container{
+    margin-top: 129px;
+    @include flex(center,center,row);
+}
+
+.feature-list{
+    @include flex(center,flex-start,row);
+}
+
+.feature-list:not(:last-child){
+    margin-right: 46px;
+}
+
+.feature-info{
+    width:256px;
+    margin-left: 21px;
+
+    h3{
+        color: $text-black;
+        font-size: 24px;
+    }
+
+    p{
+        margin-top: 24px;
+        font-size: 16px;
+        color: $text-lightgray;
+    }
+}
