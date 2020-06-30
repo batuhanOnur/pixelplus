@@ -116,7 +116,7 @@
 
 }
 
-@media screen and (max-width:1353px){
+@media screen and (max-width:1361px){
     .download-left{
         margin-left: 20px;
     }
@@ -169,7 +169,7 @@
 
 }
 
-@media screen and (max-width:1200px){
+@media screen and (max-width:1250px){
     nav{
         @include flex(space-between,center,row);
         width: 100%;
@@ -192,6 +192,35 @@
         margin-right: 100px;
     }
 
+    .download-right{
+
+        .left{
+            left: -1%;
+            z-index:10;
+            top:126px;
+        }
+    
+        .right{
+            right: 20%;
+            z-index:10;
+            top:126px;
+        }
+    
+        .center{
+            position: absolute;
+            top:0;
+            right: 300px;
+            z-index: 15;
+        }  
+    }
+  
+    .sun{
+        right: -40px;
+    } 
+
+    .left_two{
+        margin-right: 50px;
+    }
 }
 
 @media screen and (max-width:1135px){
@@ -767,6 +796,92 @@
         .dec{
             display: none;
         }      
+}
+
+@media screen and (max-width:375px){
+    .screenshots-info{
+        .right{
+            margin-top: 5px;
+            margin-left: 20px;
+
+            img{
+                height: 40px;
+            }
+            
+            h3{
+                font-size: 16px;
+            }
+    
+            p{
+                margin-right:20px;
+                font-size: 12px;
+                width: 150px;
+                height: 150px;     
+            }
+        }
+
+        .right_two{
+            margin-right: 60px;
+
+            img{
+                width: 100px;
+            }
+        }
+
+        .left_two{
+            margin: 5px 10px 0px 90px;
+
+            h3{
+                font-size: 16px;
+            }
+    
+            p{
+               
+                font-size: 12px;
+                width: 150px;
+                height: 150px;     
+            }
+
+        }
+
+        .left{
+            margin-left: 20px;
+
+            img{
+                width: 100px;
+            }
+        }
+
+        .cloudy{
+            @include circle(40px,40px);
+            top: 30px;
+            left: 80px;
+
+            p{
+                font-size: 10px;
+            }
+        }
+        
+        .degree{
+            @include circle(40px,40px);
+            top: 170px;
+            right: 75px;
+        
+            p{
+                font-size: 20px;
+            }
+        }
+        
+        .sun{
+            @include circle(40px,40px);
+            top: 20px;
+            right: 40px;
+
+            p{
+                font-size: 12px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:320px){

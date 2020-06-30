@@ -18,6 +18,9 @@
         
         img{
             margin-bottom: 48px;
+            animation-name: color;
+            animation-duration: 9000ms;
+            animation-iteration-count: infinite;
         }
 
         h3{
@@ -42,9 +45,13 @@
     .left_two{
         margin-top: 126px;
         margin-right: 237px;
-
+        
         img{
             margin-bottom: 49px;
+            animation-name: color;
+            animation-duration: 9000ms;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
         };
 
         h3{
@@ -111,4 +118,29 @@
 
 .three-circle{
     margin-top: 42px;
+}
+
+
+/* animations */
+
+@keyframes color { 
+    from { 
+        transform: translateX(0); 
+    } to { 
+        transform: translateX(50%); 
+    }
+}
+@-moz-keyframes color { 
+    from { 
+        transform: translateX(0); 
+    } to { 
+        transform: translateX(50%); 
+    }
+}
+@-webkit-keyframes color { 
+    from { 
+        transform: translateX(0); 
+    } to { 
+        transform: translateX(50%); 
+    }
 }

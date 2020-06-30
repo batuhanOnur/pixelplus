@@ -12,6 +12,7 @@ $circle-orange: #F2A14E;
 $circle-blue:#B8FAEE;
 $circle-lightblue: #7693C8;
 $border-color: #434769;
+$footer-arrow: #B5B5C8;
 
 
 *{
@@ -134,6 +135,23 @@ html,body{
         font-size: 18px;
         color: $text-gray;
     }
+}
+
+@mixin rotate($duration){
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    -moz-animation-name: spin;
+    -moz-animation-duration: $duration;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 /* IMPORTS */

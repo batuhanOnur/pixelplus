@@ -9,6 +9,21 @@
 
 .feature-list{
     @include flex(center,flex-start,row);
+
+    img{
+        animation-name: run;
+        animation-duration: 9000ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        -webkit-animation-name: run;
+        -webkit-animation-duration: 9000ms;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+        -moz-animation-name: run;
+        -moz-animation-duration: 9000ms;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-direction: alternate;
+    }
 }
 
 .feature-list:not(:last-child){
@@ -28,5 +43,59 @@
         margin-top: 24px;
         font-size: 16px;
         color: $text-lightgray;
+    }
+}
+
+
+/* animations */
+
+@keyframes run {
+    0%{
+        transform: translateY(0);
+        transform: rotate(0deg); 
+    }
+
+    50%{
+        transform: translateY(50%);
+        transform: rotate(180deg); 
+    }
+
+    100%{
+        transform: translateY(100%);
+        transform: rotate(360);
+    }
+}
+
+@-moz-keyframes run {
+    0%{
+        transform: translateY(0);
+        transform: rotate(0deg); 
+    }
+
+    50%{
+        transform: translateY(50%);
+        transform: rotate(180deg); 
+    }
+
+    100%{
+        transform: translateY(100%);
+        transform: rotate(360);
+    }
+}
+
+@-webkit-keyframes run {
+    0%{
+        transform: translateY(0);
+        transform: rotate(0deg); 
+    }
+
+    50%{
+        transform: translateY(50%);
+        transform: rotate(180deg); 
+    }
+
+    100%{
+        transform: translateY(100%);
+        transform: rotate(360);
     }
 }

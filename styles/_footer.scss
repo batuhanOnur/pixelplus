@@ -3,6 +3,7 @@
     height: 373px;
     background-color: $text-black;
     text-align: end;
+    position: relative;
 
     .footer-logo{
 
@@ -52,6 +53,28 @@
     p{
         color: #fff;
         font-size: 16px;
+    }
+}
+
+.footer_arrow{
+    position: absolute;
+    bottom:0;
+    right: 288px;
+    background-color: $border-color;
+    width: 51px;
+    height: 44px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    i{
+        position: absolute;
+        top:35%;
+        right: 35%;
+        color: $footer-arrow;
+        -moz-animation: bounce 2s infinite;
+        -webkit-animation: bounce 2s infinite;
+        animation: bounce 2s infinite;
     }
 }
 

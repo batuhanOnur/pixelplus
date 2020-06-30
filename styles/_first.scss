@@ -39,10 +39,12 @@
 
 .circle{
     @include circle(91px,91px);
+    @include rotate(10000ms);
 }
 
 .small_circle{
     @include circle(58px,58px);
+    @include rotate(10000ms);
 }
 
 .arrow{
@@ -52,6 +54,7 @@
     z-index: 2;
    
     i{
+
         color: $orange-color;
         -moz-animation: bounce 2s infinite;
         -webkit-animation: bounce 2s infinite;
@@ -117,7 +120,7 @@
 }
 
 
-/* animation */
+/* bounce animation */
 @-moz-keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
       -moz-transform: translateY(0);
@@ -166,6 +169,29 @@
         -webkit-transform: translateY(-5px);
         transform: translateY(-5px);
       }
+}
+
+/* circle animation */
+@-moz-keyframes spin { 
+    from { 
+        -moz-transform: rotate(0deg); 
+    } to { 
+        -moz-transform: rotate(360deg); 
+    }
+}
+@-webkit-keyframes spin { 
+    from { 
+        -webkit-transform: rotate(0deg); 
+    } to { 
+        -webkit-transform: rotate(360deg); 
+    }
+}
+@keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
 }
 
 
