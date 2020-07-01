@@ -235,6 +235,27 @@
         z-index: 3;
     }
 
+    .sunny{
+         left:-125px;
+         top: 150px;
+    }
+
+    .rio{
+        top: 350px;
+        right:-70px;
+    }
+
+    .london{
+        background-color: $blue-color;
+        top:150px;
+        right:-128px;
+    }
+
+    .dec{
+        top:30px;
+        right: -60px;
+    }
+
     .right-content{
         margin-top: 20px;
         margin-right: 15%;
@@ -470,15 +491,7 @@
      .small_circle{
      @include circle(35px,35px);
     }
-
-    .sunny{
-        left:-138px;
-        top: 100px;
-        
-        p{
-            font-size: 14px;
-        }
-    }
+ 
     
     .london{
        
@@ -495,7 +508,6 @@
         top: 200px;
         right:-50px;
         p{
-            color: $text-blue;
             font-size: 16px;
         }
         
@@ -507,14 +519,20 @@
         right: -40px;
     
         p{
-            color:$text-blue;
             font-size: 20px;
         }
     
     }
 
- 
-    
+    .sunny{
+        left:-125px;
+        top: 100px;
+
+        p{
+            font-size: 14px;
+        }
+   }
+
     .close{
         margin-top: 15px;
         transform: rotate(180deg);
@@ -558,7 +576,7 @@
             width: 250px;
         }
     }
-
+  
     .screenshots-info{
         .right{
             margin-left:50px;
